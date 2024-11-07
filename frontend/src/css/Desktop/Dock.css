@@ -1,0 +1,26 @@
+.dock{
+	width: min-content;
+	height: 4.6875rem;
+	margin: 0 auto;
+	padding: 0 0.625rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.46);
+	border-top-left-radius: 0.25rem;
+	border-top-right-radius: 0.25rem;
+	box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(0.48125rem);
+	-webkit-backdrop-filter: blur(0.48125rem);
+	border: 0.0625rem solid rgba(255, 255, 255, 0.6);
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	z-index: 101;
+	transition: top 250ms;
+}
+.dock-show{
+	top: calc(100% - 4.6875rem);
+}

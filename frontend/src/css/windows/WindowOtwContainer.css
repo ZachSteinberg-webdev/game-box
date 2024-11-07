@@ -1,0 +1,231 @@
+.otw-container{
+	width: var(--window-width);
+	min-width: var(--window-min-width);
+	max-width: var(--window-width);
+	height: var(--window-height);
+	min-height: var(--window-min-height);
+	max-height: var(--window-height);
+	margin: var(--window-margin);
+	padding: var(--window-padding);
+	display: var(--window-display);
+	flex-direction: var(--window-flex-direction);
+	justify-content: var(--window-justify-content);
+	align-items: var(--window-align-items);
+	border: var(--window-border);
+	border-radius: var(--window-border-radius);
+	background-image: url('../../assets/brick-background.jpg');
+	background-color: var(--window-background-color);
+	background-size: 110px;
+	box-sizing: var(--window-box-sizing);
+	position: var(--window-position);
+	top: var(--window-position-top);
+	bottom: var(--window-position-bottom);
+	left: var(--window-position-left);
+	right: var(--window-position-right);
+	z-index: var(--window-z-index);
+	opacity: var(--window-opacity);
+	transition: var(--window-transition);
+	user-select: var(--window-user-select);
+	-webkit-user-select: var(--window-user-select);
+}
+.otw-container-in-use{
+	opacity: var(--window-in-use-opacity);
+}
+.otw-title-container{
+	width: var(--title-bar-width);
+	height: var(--title-bar-height);
+	margin: var(--title-bar-margin);
+	padding: var(--title-bar-padding);
+	display: var(--title-bar-display);
+	flex-direction: var(--title-bar-flex-direction);
+	justify-content: var(--title-bar-justify-content);
+	align-items: var(--title-bar-align-items);
+	flex-shrink: var(--title-bar-flex-shrink);
+	flex-grow: var(--title-bar-flex-grow);
+	border-bottom: var(--window-border);
+	border-top-left-radius: var(--window-border-radius);
+	border-top-right-radius: var(--window-border-radius);
+	background-color: var(--title-bar-background-color);
+	position: var(--title-bar-position);
+}
+.otw-title-container::before{
+	width: var(--title-bar-before-width);
+	height: var(--title-bar-before-height);
+	margin: var(--title-bar-before-margin);
+	padding: var(--title-bar-before-padding);
+	border-top-left-radius: var(--window-border-radius);
+	border-top-right-radius: var(--window-border-radius);
+	box-shadow: var(--title-bar-box-shadow);
+	content: var(--title-bar-before-content);
+	position: var(--title-bar-before-position);
+	top: var(--title-bar-before-position-top);
+	left: var(--title-bar-before-position-left);
+	right: var(--title-bar-before-position-right);
+}
+.otw-window-lefthand-buttons-container{
+	width: var(--title-bar-lefthand-buttons-container-width);
+	height: var(--title-bar-lefthand-buttons-container-height);
+	margin: var(--title-bar-lefthand-buttons-container-margin);
+	display: var(--title-bar-lefthand-buttons-container-display);
+	flex-direction: var(--title-bar-lefthand-buttons-container-flex-direction);
+	justify-content: var(--title-bar-lefthand-buttons-container-justify-content);
+	align-items: var(--title-bar-lefthand-buttons-container-align-items);
+	flex-shrink: var(--title-bar-lefthand-buttons-container-flex-shrink);
+	flex-grow: var(--title-bar-lefthand-buttons-container-flex-grow);
+}
+.otw-window-button{
+	width: var(--title-bar-lefthand-button-width);
+	height: var(--title-bar-lefthand-button-height);
+	margin: var(--title-bar-lefthand-button-margin);
+	border: var(--title-bar-lefthand-button-border);
+	border-radius: var(--title-bar-lefthand-button-border-radius);
+	box-shadow: var(--title-bar-lefthand-button-box-shadow);
+	position: var(--title-bar-lefthand-button-position);
+}
+.otw-window-button::before{
+	width: var(--title-bar-lefthand-button-before-width);
+	height: var(--title-bar-lefthand-button-before-height);
+	margin: var(--title-bar-lefthand-button-before-margin);
+	padding: var(--title-bar-lefthand-button-before-padding);
+	border-radius: var(--title-bar-lefthand-button-before-border-radius);
+	background: var(--title-bar-lefthand-button-before-background);
+	content: var(--title-bar-lefthand-button-before-content);
+	position: var(--title-bar-lefthand-button-before-position);
+	top: var(--title-bar-lefthand-button-before-position-top);
+	left: var(--title-bar-lefthand-button-before-position-left);
+	right: var(--title-bar-lefthand-button-before-position-right);
+}
+.otw-window-close-button{
+	background: var(--title-bar-close-button-background);
+}
+.otw-window-minimize-button{
+	background: var(--title-bar-minimize-button-background);
+}
+.otw-window-maximize-button{
+	background: var(--title-bar-maximize-button-background);
+}
+.otw-title{
+	padding: var(--title-bar-text-padding);
+	font-size: var(--ui-font-size);
+	font-family: var(--font-main);
+	color: var(--ui-font-color);
+	text-shadow: var(--title-bar-text-shadow);
+}
+.otw-window-righthand-button-container{
+	width: var(--title-bar-righthand-buttons-container-width);
+	height: var(--title-bar-righthand-buttons-container-height);
+	margin: var(--title-bar-righthand-buttons-container-margin);
+	display: var(--title-bar-righthand-buttons-container-display);
+	flex-direction: var(--title-bar-righthand-buttons-container-flex-direction);
+	justify-content: var(--title-bar-righthand-buttons-container-justify-content);
+	align-items: var(--title-bar-righthand-buttons-container-align-items);
+	flex-shrink: var(--title-bar-righthand-buttons-container-flex-shrink);
+	flex-grow: var(--title-bar-righthand-buttons-container-flex-grow);
+}
+.otw-window-righthand-button{
+	width: var(--title-bar-righthand-button-width);
+	height: var(--title-bar-righthand-button-height);
+	margin: var(--title-bar-righthand-button-margin);
+	border: var(--title-bar-righthand-button-border);
+	border-radius: var(--title-bar-righthand-button-border-radius);
+	background: var(--title-bar-righthand-button-background);
+	box-shadow: var(--title-bar-righthand-button-box-shadow);
+	position: var(--title-bar-righthand-button-position);
+}
+.otw-window-righthand-button::before{
+	width: var(--title-bar-righthand-button-before-width);
+	height: var(--title-bar-righthand-button-before-height);
+	margin: var(--title-bar-righthand-button-before-margin);
+	padding: var(--title-bar-righthand-button-before-padding);
+	border-radius: var(--title-bar-righthand-button-before-border-radius);
+	background: var(--title-bar-righthand-button-before-background);
+	content: var(--title-bar-righthand-button-before-content);
+	position: var(--title-bar-righthand-button-before-position);
+	top: var(--title-bar-righthand-button-before-position-top);
+	left: var(--title-bar-righthand-button-before-position-left);
+	right: var(--title-bar-righthand-button-before-position-right);
+}
+.otw-modal-resize-handle{
+	position: var(--window-resize-handle-position);
+	bottom: var(--window-resize-handle-position-bottom);
+	right: var(--window-resize-handle-position-right);
+}
+.otw-modal-resize-handle:hover{
+	cursor: var(--window-resize-handle-hover-cursor);
+}
+.otw-modal-resize-handle *{
+	pointer-events: var(--window-resize-handle-pointer-events);
+	-webkit-pointer-events: var(--window-resize-handle-pointer-events);
+}
+.otw-instructions-button-container{
+	width: 2rem;
+	height: 2rem;
+	margin: var(--window-instructions-button-container-margin);
+	display: var(--window-instructions-button-container-display);
+	flex-direction: var(--window-instructions-button-container-flex-direction);
+	justify-content: var(--window-instructions-button-container-justify-content);
+	align-items: var(--window-instructions-button-container-align-items);
+	cursor: var(--window-instructions-button-container-cursor);
+	border: var(--button-border);
+	border-radius: var(--window-instructions-button-container-border-radius);
+	background: var(--button-background-muted);
+	position: var(--window-instructions-button-container-position);
+	top: 2.5rem;
+	right: 1rem;
+	overflow: var(--window-instructions-button-container-overflow);
+	z-index: var(--window-instructions-button-container-z-index);
+}
+.otw-instructions-button-container::before{
+	background: var(--button-before-background);
+	border-radius: var(--button-border-radius);
+	content: var(--window-instruction-button-container-before-content);
+	width: var(--window-instruction-button-container-before-width);
+	height: var(--window-instruction-button-container-before-height);
+	margin: var(--window-instruction-button-container-before-margin);
+	position: var(--window-instruction-button-container-before-position);
+	top: var(--window-instruction-button-container-before-position-top);
+	bottom: var(--window-instruction-button-container-before-position-bottom);
+	left: var(--window-instruction-button-container-before-position-left);
+	right: var(--window-instruction-button-container-before-position-right);
+}
+#otw-info-icon{
+	width: 2rem;
+	height: 2rem;
+}
+.otw-background-overlay{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: var(--window-border-radius);
+	background-color: #f000;
+}
+
+.otw-gameboard{
+	background-color: #585858;
+	box-shadow: inset 0 0 1.875rem 0 black;
+	width: calc(100% - 6rem);
+	height: calc(100% - 6.5rem);
+	margin: 0;
+	padding: 0;
+	border-radius: 3.125rem;
+	position: absolute;
+	overflow: hidden;
+	transition: border-color 300ms;
+}
+.otw-gameball{
+	display: none;
+	background-color: #8b8b8b;
+	background: radial-gradient(circle at 54% 45%, #d4d4d4, #2e2e2e);
+	box-shadow: 0 0 0.9375rem 0;
+	height: 5rem;
+	width: 5rem;
+	border-radius: 50%;
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}

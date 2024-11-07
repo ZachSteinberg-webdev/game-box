@@ -1,0 +1,8 @@
+.dock-activator{
+	width: 92.5vw;
+	height: 0.9375rem;
+	background-color: transparent;
+	position: absolute;
+	bottom: 0;
+	z-index: 100;
+}

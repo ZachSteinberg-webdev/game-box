@@ -1,0 +1,71 @@
+.sp-window-preference-pane-time{
+	width: 100%;
+	height: 1%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+	overflow-y: auto;
+}
+.sp-window-preference-pane-time-header{
+	margin: 0.425rem 0 0.75rem 0;
+	font-size: 0.9rem;
+}
+#sp-window-preference-pane-time-header-date-options{
+	margin-right: 0.165rem;
+}
+#sp-window-preference-pane-time-clock-container{
+	width: min-content;
+	height: min-content;
+	margin: 0.5rem 0.5rem 2rem 0.5rem;
+	padding: 0.75rem;
+	cursor: default;
+	border: 0.0625rem solid gray;
+	border-radius: 0.15rem;
+	background-color: #FFFFFF;
+	box-shadow: #D8D8D8 0 0 0.125rem 0.125rem inset;
+}
+#sp-window-preference-pane-time-clock{
+	height: 100%;
+	width: min-content;
+	padding: 0 0.5rem 0 0.25rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	font-family: var(--font-main);
+	font-size: 1rem;
+}
+.sp-window-preference-pane-time-hr{
+	width: 75%;
+}
+.sp-window-preference-pane-time-show-date-and-time-form{
+	margin: 1.5rem 0 0 0;
+}
+.sp-window-preference-pane-time-header-form-groups-container{
+	margin: 1rem 0 0 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.sp-window-preference-pane-time-header-form-group{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	text-align: left;
+}
+.sp-window-preference-pane-time-input-label-group{
+	display: block;
+	margin: 0.25rem auto;
+}
+.sp-window-preference-pane-time-label{
+	font-size: 0.9rem;
+}
+.label-disabled{
+	color: grey;
+}

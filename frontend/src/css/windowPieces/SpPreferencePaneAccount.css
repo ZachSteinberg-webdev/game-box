@@ -1,0 +1,105 @@
+.sp-window-preference-pane-account{
+	width: 100%;
+	height: 1%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-grow: 1;
+	overflow-y: auto;
+}
+.sp-window-preference-pane-item-account{
+	margin: 0.5rem;
+	font-size: 0.85rem;
+}
+.sp-window-preference-pane-hr{
+	width: 75%;
+}
+#sp-window-preference-pane-account-username-update-form{
+	width: max-content;
+}
+#sp-window-preference-pane-account-password-update-form{
+	width: max-content;
+}
+#sp-window-preference-pane-account-show-in-menubar-form{
+	margin-top: 1rem;
+}
+.sp-window-preference-pane-item-account-form-title{
+	margin: 0.25rem 0 1rem 0;
+}
+#sp-window-preference-pane-label-input-group{
+	margin: 0.5rem 0 0.25rem 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+}
+.sp-window-preference-pane-account-input-label{
+	margin-right: 0.5rem;
+	font-size: 0.75rem;
+}
+#sp-window-preference-pane-account-label-show-in-menubar{
+	margin-left: 0.5rem;
+}
+.sp-window-preference-pane-account-input{
+	margin: 0.5rem 0 0 0;
+}
+.sp-window-preference-pane-item-account-change-username-message{
+	height: 0.5rem;
+	margin: 0 0 0.5rem 0;
+	font-size: 0.7rem;
+	opacity: 0;
+	transition: opacity 500ms;
+}
+.sp-window-preference-pane-item-account-change-username-message-show{
+	opacity: 1;
+}
+.sp-window-preference-pane-item-account-change-password-message{
+	height: 0.5rem;
+	margin: 0 0 0.5rem 0;
+	font-size: 0.7rem;
+	opacity: 0;
+	transition: opacity 500ms;
+}
+.sp-window-preference-pane-item-account-change-password-message-show{
+	opacity: 1;
+}
+.sp-window-preference-pane-button-account{
+	display: block;
+	appearance: none;
+	-webkit-appearance: none;
+	border: var(--button-border);
+	border-radius: var(--button-border-radius);
+	box-shadow: var(--button-box-shadow);
+	cursor: pointer;
+	font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
+	font-size: 0.8rem;
+	background: var(--button-background);
+	overflow: hidden;
+	border-color: #3672B6;
+	color: #fff;
+	margin: 0.25rem auto;
+	padding: 0.25rem 0.75rem;
+	position: relative;
+	cursor: default;
+}
+.sp-window-preference-pane-button-account:before {
+		background: var(--button-before-background);
+		border-radius: var(--button-border-radius);
+		content:'';
+		height: 55%;
+		width: 95.75%;
+		margin: 0 auto;
+		left: 0;
+		position: absolute;
+		top: 0.0625rem;
+		left: 0;
+		right: 0;
+}
+.sp-window-preference-pane-button-account:focus-visible{
+	outline-offset: 0.0625rem;
+	outline-width: 0.1875rem;
+	outline-style: solid;
+	outline-color: #4D93E2;
+}

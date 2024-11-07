@@ -1,0 +1,90 @@
+/* All dock icons */
+.dock-icon-container{
+	width: 4.0625rem;
+	height: 100%;
+	margin: 0 0.3125rem;
+	padding: 0.3125rem 0;
+	box-sizing: border-box;
+	user-select: none;
+	-webkit-user-select: none;
+}
+.dock-icon-button{
+	width: 100%;
+	height: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	background: transparent;
+	border: none;
+	transition: transform 400ms;
+}
+.dock-icon-button:hover{
+	transform: scale(1.2);
+}
+.dock-icon{
+	height: 100%;
+	width: 100%;
+	background-color: transparent;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	border-radius: 0.3125rem;
+	pointer-events: none;
+}
+.dock-icon-app-running-indicator{
+	width: 100%;
+	height: 15%;
+	font-size: 1.25rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+/* ------------------------------------------------------------------------------------------------- */
+/* Reaction Time Test Icon */
+.dock-rtt-test-icon{
+	background-image: url('../../assets/reaction-test-icon-g.png');
+}
+.dock-rtt-test-icon-selected{
+	background-color: #BABABAA8;
+}
+/* ------------------------------------------------------------------------------------------------- */
+/* Speed Clicker Icon */
+.dock-sc-test-icon{
+	margin-right: 0.5rem;
+	background-image: url('../../assets/speed-clicker-icon-g.png');
+}
+.dock-sc-test-icon-selected{
+	background-color: #BABABAA8;
+}
+/* ------------------------------------------------------------------------------------------------- */
+/* Off The Wall Icon */
+.dock-otw-icon{
+	background-image: url('../../assets/off-the-wall-icon-with-stroke.png');
+}
+.dock-otw-icon-selected{
+	background-color: #BABABAA8;
+}
+/* ------------------------------------------------------------------------------------------------- */
+/* System Preferences Icon */
+.dock-sp-icon{
+	background-image: url('../../assets/system-preferences-icon-2.png');
+}
+.dock-sp-icon-selected{
+	background-color: #BABABAA8;
+}
+/* ------------------------------------------------------------------------------------------------- */
+/* Dock vertical separator */
+.vertical-separator{
+	width: 0.0625rem;
+	height: 90%;
+	margin-left: 0.3125rem;
+	margin-right: 0.3125rem;
+	background-color: #E9E9E9;
+}
+/* ------------------------------------------------------------------------------------------------- */
+/* Trash Icon */
+.dock-trash-icon{
+	background-image: url('../../assets/79131_empty_trash_white_icon.png');
+}

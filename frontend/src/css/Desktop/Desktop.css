@@ -1,0 +1,11 @@
+.desktop-spinner{
+	width: 5rem;
+	height: 5rem;
+	margin: auto;
+	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}

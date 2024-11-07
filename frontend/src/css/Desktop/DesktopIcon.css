@@ -1,0 +1,77 @@
+/* All desktop icons */
+.desktop-icon-container{
+	width: 11rem;
+	height: 8rem;
+	position: absolute;
+	z-index: 1;
+	left: 5%;
+	right: 95%;
+	user-select: none;
+	-webkit-user-select: none;
+}
+.desktop-icon-button{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	background: transparent;
+	border: none;
+}
+.desktop-icon{
+	height: 80%;
+	width: 65%;
+	background-color: transparent;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 0.3125rem;
+	pointer-events: none;
+}
+.desktop-icon-title{
+	height: 15%;
+	width: min-content;
+	padding: 0 0.25rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	font-size: var(--ui-font-size);
+	color: white;
+	font-family: var(--font-main);
+	font-weight: bold;
+	background-color: transparent;
+	border-radius: 0.3125rem;
+	pointer-events: none;
+}
+.desktop-icon-selected{
+	background-color: #BABABAA8;
+}
+.desktop-icon-title-selected{
+	background-color: #4A90E2;
+}
+/* ------------------------------------------------------------------------------------------------- */
+/* Reaction Time Test Icon */
+.desktop-rtt-test-icon-container{
+	top: 6rem;
+}
+.desktop-rtt-test-icon{
+	background-image: url('../../assets/reaction-test-icon-g.png');
+}
+/* ------------------------------------------------------------------------------------------------- */
+/* Speed Clicker Icon */
+.desktop-sc-test-icon-container{
+	top: 16rem;
+}
+.desktop-sc-test-icon{
+	background-image: url('../../assets/speed-clicker-icon-g.png');
+}
+/* ------------------------------------------------------------------------------------------------- */
+/* Off The Wall Icon */
+.desktop-otw-icon-container{
+	top: 26rem;
+}
+.desktop-otw-icon{
+	background-image: url('../../assets/off-the-wall-icon-with-stroke.png');
+}

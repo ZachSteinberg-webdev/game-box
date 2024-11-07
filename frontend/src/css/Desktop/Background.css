@@ -1,0 +1,39 @@
+.desktop-background{
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+}
+.background-loading-spinner{
+	width: 10vw;
+	height: 10vw;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.background-image{
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+}
+.background-image-credit-container{
+	height: min-content;
+	width: max-content;
+	color: black;
+	background-color: #ffffff9e;
+	position: absolute;
+	right: 0.125rem;
+	bottom: 0;
+	border: 0.125rem solid transparent;
+	border-top-left-radius: 0.25rem;
+}
+.background-image-credit-text{
+	height: min-content;
+	width: max-content;
+	font-size: 0.8rem;
+}
+.background-image-credit-link{
+	color: black;
+}

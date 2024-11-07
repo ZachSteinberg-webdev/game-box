@@ -1,0 +1,11 @@
+.dock-deactivator{
+	width: 92.5vw;
+	height: 4.6875rem;
+	background-color: transparent;
+	position: absolute;
+	bottom: -4.6875rem;
+	z-index: 99;
+}
+.dock-deactivator-show{
+	bottom: 0;
+}

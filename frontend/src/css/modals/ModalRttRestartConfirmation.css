@@ -1,0 +1,156 @@
+.rtt-restart-confirmation-container{
+	height: min-content;
+	width: min-content;
+	margin: var(--modal-margin);
+	display: var(--modal-display);
+	flex-direction: var(--modal-flex-direction);
+	justify-content: var(--modal-justify-content);
+	align-items: var(--modal-align-items);
+	background-color: var(--window-background-color);
+	box-shadow: var(--modal-box-shadow);
+	border: var(--window-border);
+	border-radius: var(--window-border-radius);
+	position: var(--modal-position);
+	top: var(--modal-position-top);
+	bottom: var(--modal-position-bottom);
+	left: var(--modal-position-left);
+	right: var(--modal-position-right);
+	z-index: var(--modal-z-index);
+	overflow: var(--modal-overflow);
+	opacity: var(--modal-opacity);
+	transition: var(--modal-transition);
+	user-select: var(--modal-user-select);
+	-webkit-user-select: var(--modal-user-select);
+	cursor: var(--modal-cursor);
+}
+.rtt-restart-confirmation-container-in-use{
+	opacity: var(--modal-in-use-opacity);
+}
+.rtt-restart-confirmation-title-bar{
+	width: var(--modal-title-bar-width);
+	height: var(--modal-title-bar-height);
+	margin: var(--modal-title-bar-margin);
+	padding: var(--modal-title-bar-padding);
+	display: var(--modal-title-bar-display);
+	flex-direction: var(--modal-title-bar-flex-direction);
+	justify-content: var(--modal-title-bar-justify-content);
+	align-items: var(--modal-title-bar-align-items);
+	flex-shrink: var(--modal-title-bar-flex-shrink);
+	flex-grow: var(--modal-title-bar-flex-grow);
+	position: var(--modal-title-bar-position);
+	text-align: var(--modal-title-bar-text-align);
+	text-align-last: var(--modal-title-bar-text-align-last);
+	text-justify: var(--modal-title-bar-text-justify);
+	border-bottom: var(--window-border);
+	border-top-left-radius: var(--window-border-radius);
+	border-top-right-radius: var(--window-border-radius);
+	background-color: var(--title-bar-background-color);
+}
+.rtt-restart-confirmation-title-bar::before{
+	width: var(--modal-title-bar-before-width);
+	height: var(--modal-title-bar-before-height);
+	margin: var(--modal-title-bar-before-margin);
+	padding: var(--modal-title-bar-before-padding);
+	content: var(--modal-title-bar-before-content);
+	position: var(--modal-title-bar-before-position);
+	top: var(--modal-title-bar-before-position-top);
+	left: var(--modal-title-bar-before-position-left);
+	right: var(--modal-title-bar-before-position-right);
+	border-top-left-radius: var(--window-border-radius);
+	border-top-right-radius: var(--window-border-radius);
+	box-shadow: var(--title-bar-box-shadow);
+}
+.rtt-restart-confirmation-title{
+	padding: var(--modal-title-padding);
+	font-size: var(--default-font-size);
+	font-family: var(--font-main);
+	color: var(--modal-title-color);
+	text-shadow: var(--modal-title-text-shadow);
+	overflow: var(--modal-title-overflow);
+	white-space: var(--modal-title-white-space);
+	text-overflow: var(--modal-title-overflow);
+}
+.rtt-restart-confirmation-icon-and-message-container{
+	height: min-content;
+	width: 95%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.rtt-restart-confirmation-icon{
+	height: 8rem;
+	width: 25%;
+	background-color: transparent;
+	background-image: url('../assets/restart-confirmation-icon-g.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 0.3125rem;
+}
+.rtt-restart-confirmation-message-container{
+	height: min-content;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.rtt-restart-confirmation-message{
+	height: min-content;
+	width: 100%;
+	margin: 0.5rem;
+	font-family: var(--font-main);
+	font-size: var(--default-font-size);
+	text-align: left;
+}
+.rtt-restart-confirmation-button-container{
+	height: 2.1875rem;
+	width: 21.875rem;
+	margin: 0.5rem auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.rtt-restart-confirmation-button{
+	height: 100%;
+	width: 45%;
+	-webkit-appearance: none;
+	border: var(--button-border);
+	border-radius: var(--button-border-radius);
+	box-shadow: var(--button-box-shadow);
+	cursor: default;
+	font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
+	font-size: var(--default-font-size);
+	overflow: hidden;
+	color: white;
+	position: relative;
+}
+.rtt-restart-confirmation-button::before{
+	background: var(--button-before-background);
+	border-radius: var(--button-border-radius);
+	content:'';
+	height: 55%;
+	width: 95.75%;
+	margin: 0 auto;
+	left: 0;
+	position: absolute;
+	top: 0.0625rem;
+	left: 0;
+	right: 0;
+}
+.rtt-restart-confirmation-button:focus-visible{
+	outline-offset: 0.0625rem;
+	outline-width: 0.1875rem;
+	outline-style: solid;
+	outline-color: #4D93E2;
+}
+.rtt-confirm-restart{
+	background: var(--button-background);
+	border-color: #3672B6;
+}
+.rtt-cancel-restart{
+	background: var(--button-background-muted);
+	border-color: #888A8B;
+}

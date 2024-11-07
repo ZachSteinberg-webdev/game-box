@@ -1,0 +1,241 @@
+.menubar-container{
+	height: 1.375rem;
+	width: 100%;
+	margin: 0;
+	padding: 0 0.75rem;
+	display: flex;
+	flex-direction: row;
+	flex-grow: 0;
+	flex-shrink: 0;
+	justify-content: space-between;
+	background: linear-gradient(#EEE 0%, #EEE 45%, #E6E6E6 55%, #E6E6E6 100%);
+	box-sizing: border-box;
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	right: 0;
+	user-select: none;
+	-webkit-user-select: none;
+}
+.menubar-left-container{
+	height: 100%;
+	width: min-content;
+	display: flex;
+	flex-direction: row;
+	flex-grow: 0;
+	flex-shrink: 0;
+	justify-content: flex-start;
+	align-items: center;
+}
+.menubar-button-and-dropdown-menu-container{
+	height: 100%;
+}
+.menubar-button-container{
+	height: 100%;
+	width: max-content;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.menubar-button{
+	height: 100%;
+	width: max-content;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 0.125rem solid transparent;
+	font-family: var(--font-main);
+	font-size: var(--ui-font-size);
+	text-align: left;
+	background-color: transparent;
+}
+.menubar-button:hover{
+	background-color: transparent;
+}
+.menubar-app-button{
+	font-weight: 600;
+}
+#pear-button{
+	height: 100%;
+	width: 1rem;
+	padding: 0 1rem;
+	position: relative;
+	border: none;
+}
+#pear-button-text{
+	background-image: url('../../assets/pear-icon-with-bite-v2-g.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	height: 85% !important;
+	padding: 0 0.65rem !important;
+}
+.pear-button:hover{
+	background-color: transparent;
+}
+.menubar-button-text{
+	pointer-events: none;
+	height: 100%;
+	width: max-content;
+	padding: 0 0.25rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+.dropdown-menu{
+	height: min-content;
+	width: max-content;
+	margin: 0;
+	padding: 0.1875rem 0;
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	flex-grow: 0;
+	font-family: var(--font-main);
+	font-size: var(--ui-font-size);
+	background-color: #E8E8E8;
+	border-bottom-left-radius: 0.3125rem;
+	border-bottom-right-radius: 0.3125rem;
+	box-sizing: border-box;
+	box-shadow: 0 0.0625rem 0.1875rem black;
+	position: absolute;
+	z-index: 1;
+	visibility: collapse;
+	opacity: 0;
+	transition: opacity 250ms, visibility 250ms;
+	cursor: default;
+}
+.dropdown-menu-in-use{
+	visibility: visible;
+	opacity: 100%;
+	transition: opacity 250ms, visibility 250ms;
+}
+.app-button{
+	font-weight: bold;
+}
+.menubar-right-container{
+	height: 100%;
+	width: min-content;
+	display: flex;
+	flex-direction: row;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+.dropdown-menu-item{
+	height: 1.25rem;
+	padding: 0 0.3125rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	color: var(--menu-item-text-color);
+}
+.dropdown-menu-item:hover{
+	color: white;
+	background-color: var(--menu-item-highlight-color);
+}
+.dropdown-menu-hr{
+	width: 99%;
+	margin: 0.25rem 0;
+	color: #C3C9CC;
+}
+.menu-checkmark{
+	width: 0.46875rem;
+	text-align: left;
+	pointer-events: none;
+}
+.menu-item{
+	text-align: left;
+	margin: 0 auto 0 0.5rem;
+	pointer-events: none;
+}
+.menu-shortcut{
+	min-width: 1.5rem;
+	text-align: right;
+	margin: 0 0.125rem 0 1.25rem;
+	pointer-events: none;
+}
+.menu-item-greyed-out{
+	color: var(--menu-item-greyed-out-color);
+}
+.clock-container{
+	width: min-content;
+	height: 100%;
+	margin: 0 0 0 0;
+	padding: 0;
+	cursor: default;
+}
+#menubar-clock{
+	width: min-content;
+	height: 100%;
+	padding: 0 0.5rem 0 0.25rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	font-family: var(--font-main);
+	font-size: var(--ui-font-size);
+}
+#menubar-clock div{
+	pointer-events: none;
+}
+.menubar-dropdown-menu-item-clock-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	flex-grow: 1;
+	color: grey;
+}
+#wifi-icon{
+	height: 1.125rem;
+	margin: auto;
+}
+#bluetooth-icon{
+	height: 1.125rem;
+	margin: auto;
+	padding: 0 0.25rem;
+}
+#speaker-icon{
+	height: 1.125rem;
+	margin: auto;
+	padding-right: 0.4rem;
+}
+#magnifying-glass-icon{
+	height: 1.125rem;
+	margin: auto;
+	padding: 0 0.125rem;
+}
+.menubar-account-icon-and-account-name{
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.menubar-account-icon{
+	height: 1.15rem;
+	margin: 0 0 0.125rem 0;
+	pointer-events: none;
+}
+#menubar-account-name{
+	margin: auto 0.5rem auto 0.25rem;
+	font-family: var(--font-main);
+	font-size: var(--ui-font-size);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+}
+#menubar-account-dropdown-menu{
+	right: 2.125rem;
+}
+#dropdown-menu-item-account-name{
+	color: grey;
+}
