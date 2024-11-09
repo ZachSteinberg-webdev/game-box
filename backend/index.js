@@ -1,7 +1,6 @@
 if(process.env.NODE_ENV!=="production") {
 	const dotenv=require('dotenv').config();
 };
-console.log('In backend index.js file');
 const express=require('express');
 const path=require('path');
 const cors=require('cors');
@@ -9,7 +8,7 @@ const mongoose=require('mongoose');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const mongoSanitize = require('express-mongo-sanitize');
-// const helmet = require('helmet');
+const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
 const errorHandler = require('./middleware/error.js');
 const hmsTime = require('./utilities/hmsTime');
@@ -28,8 +27,11 @@ app.use(cookieParser());
 // CORS middleware
 app.use(cors());
 
+// Mongo sanitize middleware
+app.use(mongoSanitize());
+
 // Helmet middleware
-// app.use(helmet());
+app.use(helmet());
 
 // Error handler middleware
 app.use(errorHandler);
