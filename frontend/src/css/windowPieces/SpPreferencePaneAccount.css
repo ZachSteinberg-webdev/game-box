@@ -16,11 +16,13 @@
 .sp-window-preference-pane-hr{
 	width: 75%;
 }
-#sp-window-preference-pane-account-username-update-form{
-	width: max-content;
-}
+#sp-window-preference-pane-account-username-update-form,
 #sp-window-preference-pane-account-password-update-form{
-	width: max-content;
+	width: 100%;
+	max-width: 28rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 #sp-window-preference-pane-account-show-in-menubar-form{
 	margin-top: 1rem;
@@ -34,6 +36,8 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: baseline;
+	width: 100%;
+	max-width: 24rem;
 }
 .sp-window-preference-pane-account-input-label{
 	margin-right: 0.5rem;
@@ -46,21 +50,29 @@
 	margin: 0.5rem 0 0 0;
 }
 .sp-window-preference-pane-item-account-change-username-message{
-	height: 0.5rem;
+	min-height: 1rem;
 	margin: 0 0 0.5rem 0;
 	font-size: 0.7rem;
 	opacity: 0;
 	transition: opacity 500ms;
+	max-width: 24rem;
+	text-align: center;
+	word-break: break-word;
+	overflow-wrap: anywhere;
 }
 .sp-window-preference-pane-item-account-change-username-message-show{
 	opacity: 1;
 }
 .sp-window-preference-pane-item-account-change-password-message{
-	height: 0.5rem;
+	min-height: 1rem;
 	margin: 0 0 0.5rem 0;
 	font-size: 0.7rem;
 	opacity: 0;
 	transition: opacity 500ms;
+	max-width: 24rem;
+	text-align: center;
+	word-break: break-word;
+	overflow-wrap: anywhere;
 }
 .sp-window-preference-pane-item-account-change-password-message-show{
 	opacity: 1;

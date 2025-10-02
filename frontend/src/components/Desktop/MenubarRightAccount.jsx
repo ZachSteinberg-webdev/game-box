@@ -13,7 +13,7 @@ export default function MenubarRightAccount({
 	dropdownMenuItemOnClick,
 	noMouseEnter
 }){
-	const {user, setUser}=useContext(UserContext);
+	const {user, setUser, isGuest}=useContext(UserContext);
 	return(
 		<MenubarButtonAndDropdownMenu>
 			<MenubarAccountName
@@ -33,6 +33,27 @@ export default function MenubarRightAccount({
 					dropdownMenuItemShortcut={''}
 				/>
 				<hr className='dropdown-menu-hr'/>
+				{isGuest && (
+					<>
+						<MenubarDropdownMenuItem
+							dropdownMenuItemClassName={'dropdown-menu-item'}
+							dropdownMenuItemId={'dropdown-menu-item-register-account'}
+							dropdownMenuItemOnClick={dropdownMenuItemOnClick}
+							dropdownMenuItemCheckmark={''}
+							dropdownMenuItemText={'Register'}
+							dropdownMenuItemShortcut={''}
+						/>
+						<MenubarDropdownMenuItem
+							dropdownMenuItemClassName={'dropdown-menu-item'}
+							dropdownMenuItemId={'dropdown-menu-item-login-account'}
+							dropdownMenuItemOnClick={dropdownMenuItemOnClick}
+							dropdownMenuItemCheckmark={''}
+							dropdownMenuItemText={'Log In'}
+							dropdownMenuItemShortcut={''}
+						/>
+						<hr className='dropdown-menu-hr'/>
+					</>
+				)}
 				<MenubarDropdownMenuItem
 					dropdownMenuItemClassName={'dropdown-menu-item'}
 					dropdownMenuItemId={'dropdown-menu-item-account-preferences'}

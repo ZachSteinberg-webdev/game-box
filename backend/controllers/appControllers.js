@@ -118,3 +118,58 @@ exports.sortScResults=async(req, res, next)=>{
 		console.log('Error in backend sortScResults route', err);
 	};
 };
+
+// Merge guest-mode data into the authenticated user's account
+exports.migrateGuestData=async(req, res, next)=>{
+	try{
+		const user=await User.findById(req.user.id);
+		if(!user){
+			return res.status(404).json({success: false, message: 'User not found'});
+		};
+		const {
+			rttResults,
+			otwResults,
+			scResults,
+			preferences,
+			wallpaper
+		}=req.body || {};
+		if(Array.isArray(rttResults) && rttResults.length>0){
+			user.rttResults=[...user.rttResults, ...rttResults];
+		};
+		if(Array.isArray(otwResults) && otwResults.length>0){
+			user.otwResults=[...user.otwResults, ...otwResults];
+		};
+		if(Array.isArray(scResults) && scResults.length>0){
+			user.scResults=[...user.scResults, ...scResults];
+		};
+		if(preferences && typeof preferences==='object'){
+			const preferenceKeys=[
+				'showAccountInMenubar',
+				'showDateAndTime',
+				'showDayName',
+				'showMonthName',
+				'showDay',
+				'showYear',
+				'showSeconds',
+				'showPeriod',
+				'show24HourClock'
+			];
+			preferenceKeys.forEach((key)=>{
+				if(Object.hasOwn(preferences, key) && typeof preferences[key]==='boolean'){
+					user[key]=preferences[key];
+					if(key==='show24HourClock' && preferences[key]===true){
+						user.showPeriod=false;
+					};
+				};
+			});
+		};
+		if(typeof wallpaper==='string' && wallpaper.trim().length>0){
+			user.wallpaper=wallpaper;
+		};
+		await user.save();
+		res.status(200).json({success: true, user});
+	}catch(err){
+		console.log('Error in backend migrateGuestData route', err);
+		next(err);
+	};
+};

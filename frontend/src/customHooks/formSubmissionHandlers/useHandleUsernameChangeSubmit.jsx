@@ -1,4 +1,5 @@
 import axios from 'axios';
+import {isGuestSessionActive} from '../helperFunctions/guestSession.js';
 
 const useHandleUsernameChangeSubmit=async(
 	e,
@@ -8,6 +9,22 @@ const useHandleUsernameChangeSubmit=async(
 	setCurrentUsername
 )=>{
 		e.preventDefault();
+		if(isGuestSessionActive()){
+			const usernameChangeMessage=document.querySelector('#sp-window-preference-pane-account-username-change-message');
+			if(usernameChangeMessage){
+				usernameChangeMessage.style.color='red';
+				usernameChangeMessage.innerText='Users in guest mode cannot change their username. Please register an account to enable this feature.';
+				usernameChangeMessage.classList.add('sp-window-preference-pane-item-account-change-username-message-show');
+				setTimeout(()=>{
+					usernameChangeMessage.classList.remove('sp-window-preference-pane-item-account-change-message-show');
+					setTimeout(()=>{
+						usernameChangeMessage.style.color='';
+						usernameChangeMessage.innerText='';
+					},300);
+				},2000);
+			};
+			return;
+		};
 		try{
 			const usernameInput=document.querySelector('#sp-window-preference-pane-account-input-username');
 			const usernameInputValue=usernameInput.value;

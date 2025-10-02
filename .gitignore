@@ -32,3 +32,6 @@ node_modules
 *.sln
 *.sw?
 ./disused-code
+
+# Concurrent server startup script
+dev.js

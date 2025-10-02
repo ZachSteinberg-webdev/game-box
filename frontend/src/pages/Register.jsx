@@ -18,6 +18,7 @@ import useHandleUserChange from '../customHooks/stateChangeHandlers/useHandleUse
 import useHandleRegistrationSubmit from '../customHooks/formSubmissionHandlers/useHandleRegistrationSubmit.jsx';
 import useHandleSleep from '../customHooks/helperFunctions/useHandleSleep.jsx';
 import useHandleShutdownRestartFromLoginRegister from '../customHooks/helperFunctions/useHandleShutdownRestartFromLoginRegister.jsx';
+import {startGuestSession} from '../customHooks/helperFunctions/guestSession.js';
 
 import '../css/pages/Register.css';
 
@@ -50,15 +51,23 @@ export default function Register(){
 		setModals,
 		setModalShowClasses
 	)};
+	const handleGuestModeStart=()=>{
+		if(typeof window!=='undefined'){
+			localStorage.removeItem('token');
+		};
+		startGuestSession();
+		navigate('/');
+	};
 	return(
 		<>
 			<div id='registration-page'>
 				<BackgroundImageRegister/>
-				<form id='registration-form' onSubmit={handleRegistrationSubmit}>
-					<img id='registration-form-pear-icon' src={pearIconSilver}/>
-					<p id='registration-form-header'>
-						Pear OS
-					</p>
+				<div className='registration-panel'>
+					<form id='registration-form' onSubmit={handleRegistrationSubmit}>
+						<img id='registration-form-pear-icon' src={pearIconSilver}/>
+						<p id='registration-form-header'>
+							Pear OS
+						</p>
 					<div id='registration-inputs-container'>
 						<div className='registration-input-label-container'>
 							<label
@@ -183,7 +192,17 @@ export default function Register(){
 							</p>
 						</div>
 					</div>
-				</form>
+					</form>
+					<div className='guest-mode-entry-container'>
+						<button
+							className='guest-mode-entry-button'
+							type='button'
+							onClick={handleGuestModeStart}
+						>
+							Continue as Guest
+						</button>
+					</div>
+				</div>
 				<div
 					className='login-link-container'
 				>

@@ -1,0 +1,41 @@
+.guest-banner{
+	position: fixed;
+	top: 0.75rem;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 0.4rem 1rem;
+	border-radius: 9999px;
+	border: 0.0625rem solid #c3c9cc;
+	background-color: rgba(255,255,255,0.95);
+	box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	font-size: 0.75rem;
+	color: #3c3c3c;
+	z-index: 10000;
+}
+.guest-banner-text{
+	margin: 0;
+	padding: 0;
+}
+.guest-banner-link{
+	color: #0251CC;
+	text-decoration: underline;
+}
+.guest-banner-link:visited{
+	color: #0251CC;
+}
+.guest-banner-dismiss{
+	background: transparent;
+	border: none;
+	color: #3c3c3c;
+	font-size: 1rem;
+	cursor: pointer;
+	padding: 0 0.25rem;
+	line-height: 1;
+}
+.guest-banner-dismiss:focus-visible{
+	outline: 0.125rem solid #4a90e2;
+	border-radius: 50%;
+}

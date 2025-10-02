@@ -10,7 +10,8 @@ const {
 	sortOtwResults,
 	addScResult,
 	clearScResults,
-	sortScResults
+	sortScResults,
+	migrateGuestData
 } = require('../controllers/appControllers.js');
 
 // Middleware
@@ -42,5 +43,8 @@ router.post('/clearScResults', isAuthenticated, clearScResults);
 
 // Sort a user's Speed Clicker results history
 router.post('/sortScResults', isAuthenticated, sortScResults);
+
+// Merge guest-mode data into an authenticated account
+router.post('/migrateGuestData', isAuthenticated, migrateGuestData);
 
 module.exports = router;

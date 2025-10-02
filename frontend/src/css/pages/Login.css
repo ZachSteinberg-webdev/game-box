@@ -54,11 +54,7 @@
 	border: var(--window-border);
 	border-radius: 0.2rem;
 	box-shadow: var(--modal-box-shadow);
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	position: relative;
 	opacity: 0;
 	transition: opacity 500ms;
 }
@@ -196,6 +192,41 @@
 }
 .registration-link:visited{
 	color: black;
+}
+.login-panel{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 30rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.25rem;
+	z-index: 2;
+}
+.guest-mode-entry-container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.guest-mode-entry-button{
+	padding: 0.5rem 1.25rem;
+	border-radius: 9999px;
+	border: 0.0625rem solid #c3c9cc;
+	background: linear-gradient(#f5f5f5 0%, #e5e5e5 100%);
+	font-family: var(--font-main);
+	font-size: 0.8rem;
+	color: #3c3c3c;
+	cursor: pointer;
+	box-shadow: inset 0 0.5rem 1rem rgba(255,255,255,0.5);
+}
+.guest-mode-entry-button:hover{
+	background: linear-gradient(#ffffff 0%, #eaeaea 100%);
+}
+.guest-mode-entry-button:focus-visible{
+	outline: 0.125rem solid #4a90e2;
+	outline-offset: 0.125rem;
 }
 .spinner{
 	width: 5rem;

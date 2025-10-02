@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node backend/index.js",
+    "dev": "node dev.js",
+    "start": "npm run start --prefix backend",
+    "start-old": "node backend/index.js",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "author": "Zach Steinberg",
@@ -22,6 +24,7 @@
     "helmet": "^8.0.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.5.3",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.10"
   }
 }

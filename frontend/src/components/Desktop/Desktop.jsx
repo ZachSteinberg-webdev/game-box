@@ -9,6 +9,7 @@ import {OtwContext} from '../../contexts/OtwContext.jsx';
 import Spinner from '../spinner/Spinner.jsx';
 import Background from './Background.jsx';
 import Menubar from './Menubar.jsx';
+import GuestModeBanner from './GuestModeBanner.jsx';
 import ModalAboutSystem from '../modals/ModalAboutSystem.jsx';
 import ModalForceQuit from '../modals/ModalForceQuit.jsx';
 // Reaction Time Test
@@ -62,7 +63,7 @@ export default function Desktop(){
 		setPanesOpen,
 		windowSizing
 	}=useContext(ModalContext);
-	const {user, setUser}=useContext(UserContext);
+	const {user, setUser, isGuest}=useContext(UserContext);
 	const {rttValues, setRttValues}=useContext(RttContext);
 	const {otwValues, setOtwValues}=useContext(OtwContext);
 	const body=document.querySelector('body');
@@ -106,6 +107,7 @@ export default function Desktop(){
 	},[modals, appOrdering.openApps, appModalOrdering]);
 	return(
 		<>
+			{isGuest && <GuestModeBanner/>}
 			<Spinner
 				spinnerClassName={'desktop-spinner'}
 			/>

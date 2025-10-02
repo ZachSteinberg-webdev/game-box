@@ -1,4 +1,5 @@
 import axios from 'axios';
+import {isGuestSessionActive} from '../helperFunctions/guestSession.js';
 
 const useHandlePasswordChangeSubmit=async(
 	e,
@@ -8,6 +9,22 @@ const useHandlePasswordChangeSubmit=async(
 	setPassword
 )=>{
 		e.preventDefault();
+		if(isGuestSessionActive()){
+			const passwordChangeMessage=document.querySelector('#sp-window-preference-pane-account-password-change-message');
+			if(passwordChangeMessage){
+				passwordChangeMessage.style.color='red';
+				passwordChangeMessage.innerText='Users in guest mode cannot set a password. Please register an account to enable this feature.';
+				passwordChangeMessage.classList.add('sp-window-preference-pane-item-account-change-password-message-show');
+				setTimeout(()=>{
+					passwordChangeMessage.classList.remove('sp-window-preference-pane-item-account-change-password-message-show');
+					setTimeout(()=>{
+						passwordChangeMessage.style.color='';
+						passwordChangeMessage.innerText='';
+					},300);
+				},2000);
+			};
+			return;
+		};
 		try{
 			const oldPasswordInput=document.querySelector('#sp-window-preference-pane-account-input-password-old');
 			const newPasswordInput=document.querySelector('#sp-window-preference-pane-account-input-password-new');

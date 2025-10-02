@@ -18,6 +18,7 @@ import useHandleUserChange from '../customHooks/stateChangeHandlers/useHandleUse
 import useHandleLoginSubmit from '../customHooks/formSubmissionHandlers/useHandleLoginSubmit.jsx';
 import useHandleSleep from '../customHooks/helperFunctions/useHandleSleep.jsx';
 import useHandleShutdownRestartFromLoginRegister from '../customHooks/helperFunctions/useHandleShutdownRestartFromLoginRegister.jsx';
+import {startGuestSession} from '../customHooks/helperFunctions/guestSession.js';
 
 import '../css/pages/Login.css';
 
@@ -54,18 +55,26 @@ export default function Login(){
 		setModals,
 		setModalShowClasses
 	)};
+	const handleGuestModeStart=()=>{
+		if(typeof window!=='undefined'){
+			localStorage.removeItem('token');
+		};
+		startGuestSession();
+		navigate('/');
+	};
 	useEffect(()=>{
 		showLoginForm();
 	});
 	return(
 		<>
-			<div id='login-page'>
-				<BackgroundImageLogin/>
-				<form className='login-form' id='login-form' onSubmit={handleLoginSubmit}>
-					<img id='login-form-pear-icon' src={pearIconSilver}/>
-					<p id='login-form-header'>
-						Pear OS
-					</p>
+				<div id='login-page'>
+					<BackgroundImageLogin/>
+					<div className='login-panel'>
+						<form className='login-form' id='login-form' onSubmit={handleLoginSubmit}>
+							<img id='login-form-pear-icon' src={pearIconSilver}/>
+							<p id='login-form-header'>
+								Pear OS
+							</p>
 					<div id='login-inputs-container'>
 						<div className='login-input-label-container'>
 							<label
@@ -171,47 +180,36 @@ export default function Login(){
 							Shutdown
 							</p>
 						</div>
-						<div
-							className='login-button-label-container'
-							id='register-button-label-container'
+					<div
+						className='login-button-label-container'
+						id='register-button-label-container'
+					>
+						<button
+							className='login-button'
+							id='login-button'
+							type='submit'
 						>
-							<button
-								className='login-button'
-								id='login-button'
-								type='submit'
-							>
-								<HomeIcon/>
-							</button>
-							<p
-								className='login-button-label'
-								id='register-button-label'
-							>
+							<HomeIcon/>
+						</button>
+						<p
+							className='login-button-label'
+							id='register-button-label'
+						>
 							Log In
-							</p>
+						</p>
+					</div>
+					</div>
+						</form>
+						<div className='guest-mode-entry-container'>
+							<button
+								className='guest-mode-entry-button'
+								type='button'
+								onClick={handleGuestModeStart}
+							>
+								Continue as Guest
+							</button>
 						</div>
 					</div>
-				</form>
-				<div className="project-guest-credentials-container">
-					<p className="project-guest-credentials-header">
-						<b>Guest credentials</b>
-					</p>
-					<div className="project-guest-credentials">
-						<div>
-							<i>Username: </i>
-						</div>
-						<div>
-							<code>guest</code>
-						</div>
-					</div>
-					<div className="project-guest-credentials">
-						<div>
-							<i>Password: </i>
-						</div>
-						<div>
-							<code>guestpassword</code>
-						</div>
-					</div>
-				</div>
 				<div
 					className='registration-link-container'
 				>

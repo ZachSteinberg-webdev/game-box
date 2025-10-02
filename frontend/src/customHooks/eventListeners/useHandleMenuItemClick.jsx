@@ -522,6 +522,10 @@ const useHandleMenuItemClick=(
 		useWindowMinimize('.otw-container');
 	}else if(e.target.id==='otw-dropdown-menu-item-window-title'){
 		useWindowMaximize('.otw-container');
+	}else if(e.target.id==='dropdown-menu-item-register-account'){
+		navigate('/register');
+	}else if(e.target.id==='dropdown-menu-item-login-account'){
+		navigate('/login');
 	}else if(e.target.id==='dropdown-menu-item-date-and-time-preferences'){
 		useAppStart(
 			'WindowSpContainer',

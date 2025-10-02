@@ -4,6 +4,7 @@ import useAppQuit from '../helperFunctions/useAppQuit.jsx';
 import useHandleRttTestQuit from '../eventListeners/useHandleRttTestQuit.jsx';
 import useHandleSleep from '../helperFunctions/useHandleSleep.jsx';
 import useHandleWake from '../helperFunctions/useHandleWake.jsx';
+import {isGuestSessionActive, clearGuestSession} from '../helperFunctions/guestSession.js';
 
 const useHandleLogout = (
 	e,
@@ -27,6 +28,7 @@ const useHandleLogout = (
 	setOtwValues,
 	windowSizing
 )=>{
+	const guestSessionActive=isGuestSessionActive();
 	if(e.target.id==='dropdown-menu-item-log-out'){
 		let openAppsMinusModals=windowModalOrdering.openWindowsModals.filter((app)=>app.includes('Window'));
 		const delay=1000;
@@ -366,6 +368,12 @@ const useHandleLogout = (
 			desktopSpinner.style.display='block';
 		},showSpinnerTimeout);
 		setTimeout(()=>{
+			if(guestSessionActive){
+				clearGuestSession();
+				localStorage.removeItem('token');
+				navigate('/login');
+				return;
+			};
 			axios.get('/api/logout')
 			.then(result=>{
 				localStorage.removeItem('token');
@@ -375,6 +383,12 @@ const useHandleLogout = (
 			});
 		},navigateTimeout);
 	}else if(e.target.id==='dropdown-menu-item-lock-screen'){
+		if(guestSessionActive){
+			clearGuestSession();
+			localStorage.removeItem('token');
+			navigate('/login');
+			return;
+		};
 		axios.get('/api/logout')
 		.then(result=>{
 			localStorage.removeItem('token');

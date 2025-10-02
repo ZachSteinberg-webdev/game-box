@@ -1,4 +1,8 @@
 import axios from 'axios';
+import {
+	migrateGuestDataIfNeeded,
+	clearGuestSession
+} from '../helperFunctions/guestSession.js';
 
 const useHandleLockscreenSubmit=async(
 	e,
@@ -20,6 +24,11 @@ const useHandleLockscreenSubmit=async(
 				localStorage.setItem('username', JSON.stringify(data.user.username));
 				localStorage.setItem('wallpaper', JSON.stringify(data.user.wallpaper));
 			};
+			const migrationResponse = await migrateGuestDataIfNeeded();
+			if(migrationResponse?.user && typeof window !== 'undefined'){
+				localStorage.setItem('wallpaper', JSON.stringify(migrationResponse.user.wallpaper));
+			};
+			clearGuestSession();
 			navigate('/');
 		}else if(data.success===false){
 			const passwordMessage=document.querySelector('#lockscreen-message-password');
