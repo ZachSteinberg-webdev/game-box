@@ -1,4 +1,4 @@
-Game Box
+# Game Box
 
 I built Game Box as a small desktop-in-the-browser: a faux Aqua-style OS X environment that runs three lightweight games, Reaction Time Test, Speed Clicker, and Off The Wall, plus a System Preferences app for time/date, user settings and desktop wallpaper choice. It’s a full-stack app with auth, guest mode, persistence, and a simple windowing system (dock, menubar, modals, z-ordering) so I could practice “product-y” engineering beyond the individual games.
 
@@ -49,8 +49,15 @@ I built Game Box as a small desktop-in-the-browser: a faux Aqua-style OS X envir
 - **Hardening:** helmet, express-mongo-sanitize, cookie-parser, cors (for dev), morgan
 - **Static serve:** Express serves the Vite `dist/` build and catches `*` to `index.html`
 
-Packages of note:
-    "helmet": "^8", "express-mongo-sanitize": "^2", "jsonwebtoken": "^9", "bcryptjs": "^2", "mongoose": "^8", "morgan": "^1", "cookie-parser": "^1", "cors": "^2"
+### Packages of note:
+- `"helmet": "^8"`
+- `"express-mongo-sanitize": "^2"`
+- `"jsonwebtoken": "^9"`
+- `"bcryptjs": "^2"`
+- `"mongoose": "^8"`
+- `"morgan": "^1"`
+- `"cookie-parser": "^1"`
+- `"cors": "^2"`
 
 ---
 
@@ -139,6 +146,7 @@ I load env via `dotenv` in non-production. In production, the platform stores se
 Prereqs: Node 18+
 
 Install root deps and run both servers with one command:
+
     npm install
     npm run dev
 
@@ -191,6 +199,7 @@ Notes:
 ## Data Model
 
 `User` (Mongoose)
+
     username: String (unique, trimmed, <=64)
     password: String (hashed with bcrypt)
     rttResults: [Number]             // ms
@@ -231,6 +240,7 @@ Pre-save hook
 ---
 
 If you want to review specific parts of the code, start with:
+
 - `frontend/src/components/Desktop/Desktop.jsx` (desktop shell + modal plumbing)
 - `frontend/src/components/windows/WindowRttContainer.jsx`, `WindowScContainer.jsx`, `WindowOtwContainer.jsx`
 - `frontend/src/components/windowSpComponents/*` (System Preferences)
