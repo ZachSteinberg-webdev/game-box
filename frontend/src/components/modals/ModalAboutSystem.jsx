@@ -91,6 +91,11 @@ export default function ModalAboutSystem(){
 					>
 						I hope this mock-up of old-style OS X puts a smile on your face as it does mine. And if you're from Apple's legal department, please don't sue me! :)
 					</p>
+					<p
+						className='about-system-message'
+					>
+						- <a href='https://www.zachsteinberg.com/' target='_blank' rel='noreferrer'>Zach Steinberg</a>
+					</p>
 					<hr className='about-system-hr'/>
 					<p
 						className='about-system-credits'
